@@ -45,7 +45,7 @@ button {
   border: none;
   background-color: #1db954;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 10px;
   transform: scale(0.9);
   color: black;
 }
