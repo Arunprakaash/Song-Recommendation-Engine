@@ -1,13 +1,5 @@
 '''webserver gateway run 2 methods Get() Post() are main methods for flask '''
-from optparse import Values
-import numpy as np
-from flask import Flask, request, jsonify, render_template
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
-import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.preprocessing import StandardScaler
-import numpy as np
+
 
 import subprocess
 import sys
@@ -18,6 +10,16 @@ def install(requirements):
             subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 install('requirements.txt')
+
+from optparse import Values
+import numpy as np
+from flask import Flask, request, jsonify, render_template
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import StandardScaler
+import numpy as np
 
 app = Flask(__name__)
 
