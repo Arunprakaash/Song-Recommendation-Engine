@@ -9,6 +9,16 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
+import subprocess
+import sys
+
+def install(requirements):
+    with open(requirements, 'r') as f:
+        for package in f.read().split('\n'):
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install('requirements.txt')
+
 app = Flask(__name__)
 
 
